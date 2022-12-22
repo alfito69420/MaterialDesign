@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_card_large"
+                android:layout_width="0dp"
+                android:layout_height="128dp"
+                android:src="@drawable/ic_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_title_large"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="24dp"
+                android:text="Title demo"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                app:firstBaselineToTopHeight="44dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_card_large" />
+
+            <RatingBar
+                android:id="@+id/rating_bar"
+                style="?ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rating="4.5"
+                app:firstBaselineToTopHeight="24dp"
+                app:layout_constraintStart_toStartOf="@id/tv_title_large"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_large" />
+
+            <TextView
+                android:id="@+id/tv_secondary_large"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Secondary Text"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:firstBaselineToTopHeight="32dp"
+                app:layout_constraintEnd_toEndOf="@id/tv_title_large"
+                app:layout_constraintStart_toStartOf="@id/tv_title_large"
+                app:layout_constraintTop_toBottomOf="@id/rating_bar" />
+
+            <TextView
+                android:id="@+id/tv_message_large"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="muchas muchas muchas muchas muchas pendejadas escritas aqui equisde jejeje saludos bandera"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:firstBaselineToTopHeight="26dp"
+                app:layout_constraintEnd_toEndOf="@id/tv_title_large"
+                app:layout_constraintStart_toStartOf="@id/tv_title_large"
+                app:layout_constraintTop_toBottomOf="@id/tv_secondary_large" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="#1e000000"
+                app:layout_constraintEnd_toEndOf="@id/tv_title_large"
+                app:layout_constraintStart_toStartOf="@id/tv_title_large"
+                app:layout_constraintTop_toBottomOf="@id/tv_message_large" />
+
+            <TextView
+                android:id="@+id/tv_subtitle_large"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="This is a subtitle"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                app:firstBaselineToTopHeight="36dp"
+                app:layout_constraintEnd_toEndOf="@id/tv_title_large"
+                app:layout_constraintStart_toStartOf="@id/tv_title_large"
+                app:layout_constraintTop_toBottomOf="@id/divider" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_first_large"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="enable"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="20dp"
+                android:text="Chip"
+                app:layout_constraintBottom_toTopOf="@id/btn_first_large"
+                app:layout_constraintStart_toStartOf="@id/tv_title_large"
+                app:layout_constraintTop_toBottomOf="@+id/tv_subtitle_large" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_second"
+                android:checkable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chip"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="@id/chip_first"
+                app:layout_constraintBottom_toBottomOf="@id/chip_first"
+                app:layout_constraintStart_toEndOf="@id/chip_first"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_third"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chip"
+                app:closeIconEnabled="true"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="@id/chip_first"
+                app:layout_constraintBottom_toBottomOf="@id/chip_first"
+                app:layout_constraintStart_toEndOf="@id/chip_second"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_fourth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chip"
+                app:checkedIcon="@drawable/ic_star"
+                android:checkable="true"
+                app:closeIconEnabled="true"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="@id/chip_first"
+                app:layout_constraintBottom_toBottomOf="@id/chip_first"
+                app:layout_constraintStart_toEndOf="@id/chip_third"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
